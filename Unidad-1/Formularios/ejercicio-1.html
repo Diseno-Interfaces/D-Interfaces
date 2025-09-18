@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+</head>
+<style>
+    .anchofield {
+        width: 50%;
+    }
+    .span {
+        color: blue;
+    }
+    .body {
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+</style>
+
+<body class="body">
+    <h1>Formulario de Registro de Usuario</h1>
+    <form name="formulario" method="post" action="#">
+        <fieldset class="anchofield">
+            <legend>Información Personal</legend>
+            <p>
+                Nombre:<br />
+                <input type="text" name="nombre" autocomplete="on" placeholder="" />
+            </p>
+            <p>
+                Apellidos:<br />
+                <input type="text" name="apellidos" autocomplete="on" />
+            </p>
+            <p>
+                Fecha de nacimiento:<br />
+                <input type="date" name="Fecha" autocomplete="on" />
+            </p>
+
+            <p>
+                Género:<br />
+                <input type="radio" name="sexo" value="hombre" /><label>Hombre</label>
+                <br />
+
+                <input type="radio" name="sexo" value="mujer" /><label>Mujer</label>
+                <br />
+
+                <input type="radio" name="sexo" value="otro" /> <label>Otro</label>
+            </p>
+
+            <p>
+                País de Residencia:
+                <br>
+                <select name="Seleccion" title="Menu">
+                    <option value="Pais">-- Seleccione un país --</option>
+                    <option value="España">España</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Italia">Italia</option>
+                    <option value="Alemania">Alemania</option>
+                    <option value="Otros...">Otros...</option>
+                </select>
+            </p>
+
+            <p>
+                Teléfono:
+                <br>
+                <input type="tel" name="telefono" placeholder="Ej: 123456789">
+            </p>
+
+        </fieldset>
+        <fieldset class="anchofield">
+            <legend>Credenciales de Acceso</legend>
+            <p>
+                Email:
+                <br>
+                <input type="email" name="Email">
+            </p>
+            <p>
+                Contraseña:
+                <br>
+                <input type="password" name="Password">
+            </p>
+            <p>
+                Confirmar Contraseña:
+                <br>
+                <input type="password" name="Password">
+            </p>
+        </fieldset>
+
+        <fieldset class="anchofield">
+            <legend>Preferencias y Términos</legend>
+            <p>
+                Intereses (Selecciona al menos uno)
+            </p>
+
+            <p>
+            <input type="Checkbox" name="Seleccion">Tecnología
+
+            <br>
+            <input type="Checkbox" name="Seleccion">Deportes
+
+            <br>
+            <input type="Checkbox" name="Seleccion">Cocina
+            </p>
+
+            <p>
+                Recibir Notificaciones por Email:
+                <br>
+                <input type="Checkbox">
+            </p>
+            <p>
+                <input type="Checkbox">Acepto los <u class="span">Términos y Condiciones</u>
+            </p>
+            
+        </fieldset>
+        <input type="submit" value="Registrarse">
+        <input type="reset" value="Limpiar Formualrio">
+    </form>
+</body>
+
+</html>
