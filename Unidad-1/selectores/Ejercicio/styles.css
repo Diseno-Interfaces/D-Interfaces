@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Arial, sans-serif;
+    src: url('./Fonts/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+    font-family: Arial, sans-serif;
+    src: url('./Fonts/PlayfairDisplay-VariableFont_wght.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header  {
+    background-color: #2D3E50;
+    height: 10vh;
+}
+
+h1, p{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    
+}
+
+nav {
+    background-color: #3f4b58ff;
+    color: white;
+}
+
+main {
+    padding: 2px 2px 2px;
+}
+
+footer {
+    background-color: #2D3E50;
+    color: white;
+    text-align: center;
+}
+
+.resaltado {
+    color: red;
+}
+
