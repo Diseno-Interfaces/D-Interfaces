@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
 </head>
-<body>
-    
+<style>
+    .anchofield {
+        width: 50%;
+        border: 1px solid black;
+    }
+
+    .span {
+        color: blue;
+    }
+
+    .body {
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+</style>
+
+<body class="body">
+    <h1>Registro para el Evento Anual Corporativo</h1>
+    <p>Por favor, completa los siguientes campos en formato requerido</p>
+    <form name="formulario" method="post" action="#">
+        <fieldset class="anchofield">
+            <legend>Información del Empleado</legend>
+            <p>
+                ID de Empleado (Formato: EMP-1234):<br />
+                <input type="text" name="nombre" autocomplete="on" placeholder="" />
+            </p>
+            <p>
+                Nombre de Usuario (5-15 caracteres, solo minúsculas y números):<br />
+                <input type="text" name="apellidos" autocomplete="on" />
+            </p>
+            <p>
+                Código Postal de la Oficina (5 dígitos):<br />
+                <input type="text" name="Fecha" autocomplete="on" />
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Registrar el Evento" />
+    </form>
+
 </body>
+
 </html>

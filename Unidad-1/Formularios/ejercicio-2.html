@@ -2,8 +2,8 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 2</title>
 </head>
 
@@ -30,10 +30,9 @@
             <legend>Tipo de Solicitud</legend>
             <p>
                 Selecciona el tipo de solicitud:
-                <br>
+                <br />
                 <select name="sistema">
-                    <option value="Seleccion" label="-- Por favor, elige --">
-                    </option>
+                    <option value="Seleccion" label="-- Por favor, elige --"></option>
                     <optgroup label="Producto">
                         <option value="A" label="Producto A"></option>
                         <option value="B" label="Producto B"></option>
@@ -46,37 +45,69 @@
                     </optgroup>
                 </select>
             </p>
+            <p>
+                Cantidad(para productos):<br />
+                <input type="number" name="numero" value="1" min="1" max="1000" step="1" />
+            </p>
+            <p>
+                Prioridad de la Solicitud:<br />
+                <input type="radio" name="solicitud" value="Baja" /><label>Baja</label>
+                <br />
 
+                <input type="radio" name="solicitud" value="Media" /><label>Media</label>
+                <br />
+
+                <input type="radio" name="solicitud" value="Alta" /><label>Alta</label>
+            </p>
         </fieldset>
 
         <fieldset class="anchofield">
-            <legend>Detaller Adicionales</legend>
+            <legend>Detalles Adicionales</legend>
+            Comentarios o Especificaciones:
+            <br />
+            <textarea name="camposEntrada"
+                placeholder="Escribe aquí cualquier detalle adicional sobre tu solicitud (máximo 500 caracteres)."
+                maxlength="500" rows="6" cols="60"></textarea><br />
+            <small>Máximo 500 caracteres.</small>
+
             <p>
-                Fecha Deseada de Entrega/Inicio:<br />
+                Fecha Deseada de Entrega/Inicio:
+                <br />
                 <input type="date" name="Fecha" autocomplete="on" />
-            </p
-        
+            </p>
+
+            <p>
+                <label>Rango Horario Preferido:</label><br />
+                <input type="time" name="hora" min="18:00" max="21:00" step="1800" />
+                -
+                <input type="time" name="hora" min="18:00" max="21:00" step="1800" />
+            </p>
+
+            <p>
+                Adjuntar documento (opcional):
+                <br />
+                <input type="file" name="Archivos" />
+            </p>
         </fieldset>
 
         <fieldset class="anchofield">
             <legend>Información de Contacto</legend>
             <p>
                 Tu Nombre:<br />
-                <input type="text" name="nombre" autocomplete="on">
+                <input type="text" name="nombre" autocomplete="on" />
             </p>
             <p>
                 Tu Email:<br />
-                <input type="email" name="email" autocomplete="on">
+                <input type="email" name="email" autocomplete="on" />
             </p>
             <p>
                 Tu Teléfono (opcional):
-                <br>
-                <input type="tel" name="telefono" autocomplete="on">
+                <br />
+                <input type="tel" name="telefono" autocomplete="on" />
             </p>
-
         </fieldset>
-        <input type="submit" value="Enviar Solicitud">
-        <input type="reset" value="Borrar Formualario">
+        <input type="submit" value="Enviar Solicitud" />
+        <input type="reset" value="Borrar Formualario" />
     </form>
 </body>
 

@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4</title>
 </head>
-<body>
-    
+<style>
+    .anchofield {
+        width: 50%;
+        border: 1px solid black;
+    }
+
+    .span {
+        color: blue;
+    }
+
+    .body {
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+</style>
+
+<body class="body">
+    <h1>Formulario de Envío de Nuevo Vídeo</h1>
+    <p>Por favor, introduce los datos respetando los formatos especificados</p>
+    <form name="formulario" method="post" action="#">
+        <fieldset class="anchofield">
+            <legend>Detalles de Contenido y Cuenta</legend>
+            <p>
+                SKU del Proyecto (Ej: AB-12345):<br />
+                <input type="text" name="nombre" autocomplete="on" placeholder="" />
+            </p>
+            <p>
+                Nueva Contraseña (min. 8 caracteres, con mayúscula, minúscula y número):<br />
+                <input type="text" name="apellidos" autocomplete="on" />
+            </p>
+            <p>
+                color Principal del Branding (Hexadecimal, ej: #FF5733):<br />
+                <input type="date" name="Fecha" autocomplete="on" />
+            </p>
+            <p>
+                ID del Video Relacionado (11 caracteres):<br />
+                <input type="text" name="apellidos" autocomplete="on" />
+            </p>
+            <p>
+                Matricula del Vehículo del Producción (Ej: 1234 BCD):<br />
+                <input type="text" name="apellidos" autocomplete="on" />
+            </p>
+        </fieldset>
+
+        <input type="submit" value="Enviar Información" />
+    </form>
+
 </body>
+
 </html>
