@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
 </head>
+
 <style>
     .anchofield {
         width: 50%;
@@ -30,19 +31,19 @@
             <legend>Información del Empleado</legend>
             <p>
                 ID de Empleado (Formato: EMP-1234):<br />
-                <input type="text" name="nombre" autocomplete="on" placeholder="" />
+                <input type="text" name="empleado" pattern="^EMP-\d{4}$" required/>
             </p>
             <p>
                 Nombre de Usuario (5-15 caracteres, solo minúsculas y números):<br />
-                <input type="text" name="apellidos" autocomplete="on" />
+                <input type="text" name="nombre" pattern="^[a-z0-9]{5,15}$" minlength="5" maxlength="15" required />
             </p>
             <p>
                 Código Postal de la Oficina (5 dígitos):<br />
-                <input type="text" name="Fecha" autocomplete="on" />
+                <input type="text" name="cp" pattern="^\d{5}$"maxlength="5" required/>
             </p>
         </fieldset>
 
-        <input type="submit" value="Registrar el Evento" />
+        <input type="submit" value="Registrarse al Evento" />
     </form>
 
 </body>

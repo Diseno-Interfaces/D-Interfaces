@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 1</title>
 </head>
+
 <style>
     .anchofield {
         width: 50%;
     }
+
     .span {
         color: blue;
     }
+
     .body {
         padding-bottom: 10px;
         padding-left: 10px;
@@ -26,20 +29,20 @@
             <legend>Información Personal</legend>
             <p>
                 Nombre:<br />
-                <input type="text" name="nombre" autocomplete="on" placeholder="" />
+                <input type="text" name="nombre" autocomplete="on" maxlength="20" title="Máximo 20 caracteres" required />
             </p>
             <p>
                 Apellidos:<br />
-                <input type="text" name="apellidos" autocomplete="on" />
+                <input type="text" name="apellidos" autocomplete="on" maxlength="30" title="Máximo 30 caracteres" required/>
             </p>
             <p>
                 Fecha de nacimiento:<br />
-                <input type="date" name="Fecha" autocomplete="on" />
+                <input type="date" name="fecha" autocomplete="on" required/>
             </p>
 
             <p>
                 Género:<br />
-                <input type="radio" name="sexo" value="hombre" /><label>Hombre</label>
+                <input type="radio" name="sexo" value="hombre" required/><label>Hombre</label>
                 <br />
 
                 <input type="radio" name="sexo" value="mujer" /><label>Mujer</label>
@@ -51,9 +54,9 @@
             <p>
                 País de Residencia:
                 <br>
-                <select name="Seleccion" title="Menu">
-                    <option value="Pais">-- Seleccione un país --</option>
-                    <optgroup label="América">
+                <select name="Seleccion" title="Menu" required>
+                    <option value="" disabled selected>-- Seleccione un país --</option>
+                    <optgroup label="América" >
                         <option value="Argentina" label="Argentina"></option>
                         <option value="México" label="México"></option>
                         <option value="Estados Unidos" label="Estados Unidos"></option>
@@ -73,7 +76,7 @@
             <p>
                 Teléfono:
                 <br>
-                <input type="tel" name="telefono" placeholder="Ej: 123456789">
+                <input type="tel" name="telefono" placeholder="Ej: 123456789" pattern="^\d{9}$" title="El teléfono debe ser de 9 números, sin prefijos, ni espacios." required>
             </p>
 
         </fieldset>
@@ -82,48 +85,47 @@
             <p>
                 Email:
                 <br>
-                <input type="email" name="Email">
+                <input type="email" name="email" required>
             </p>
             <p>
                 Contraseña:
                 <br>
-                <input type="password" name="Password">
+                <input type="password" name="password" minlength="8" maxlength="30" title="La contraseña no puede tener menos de 8 caracteres." required>
             </p>
             <p>
                 Confirmar Contraseña:
                 <br>
-                <input type="password" name="Password">
+                <input type="password" name="passwordConfirmado" required>
             </p>
         </fieldset>
 
         <fieldset class="anchofield">
             <legend>Preferencias y Términos</legend>
-            <p>
-                Intereses (Selecciona al menos uno)
-            </p>
+            <p>Intereses (Selecciona al menos uno)</p>
 
             <p>
-            <input type="Checkbox" name="Seleccion">Tecnología
+            <input type="Checkbox" name="Intereses">Tecnología
 
             <br>
-            <input type="Checkbox" name="Seleccion">Deportes
+            <input type="Checkbox" name="Intereses">Deportes
 
             <br>
-            <input type="Checkbox" name="Seleccion">Cocina
+            <input type="Checkbox" name="Intereses">Cocina
             </p>
 
             <p>
                 Recibir Notificaciones por Email:
                 <br>
-                <input type="Checkbox">
+                <input type="checkbox" name="notificaciones" checked>
             </p>
             <p>
-                <input type="Checkbox">Acepto los <u class="span">Términos y Condiciones</u>
+                <input type="checkbox" name="terminos" required>
+                Acepto los <u class="span">Términos y Condiciones</u>
             </p>
             
         </fieldset>
         <input type="submit" value="Registrarse">
-        <input type="reset" value="Limpiar Formualrio">
+        <input type="reset" value="Limpiar Formulario">
     </form>
 </body>
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 3</title>
 </head>
+
 <style>
     .anchofield {
         width: 50%;
@@ -30,7 +31,7 @@
             <p>¿Qué tan satisfecho estás con nuestro servicio/producto en general?</p>
 
             <p>
-                <input type="radio" name="check" value="muySatisfecho" /><label>Muy Satisfecho</label>
+                <input type="radio" name="check" value="muySatisfecho" required/><label>Muy Satisfecho</label>
                 <br />
 
                 <input type="radio" name="check" value="satisfecho" /><label>Satisfecho</label>
@@ -73,7 +74,7 @@
             Sugerencias a mejorar:
             <br />
             <textarea name="camposEntrada"
-                placeholder="Nos encataría escuchar tus ideas para hacer nuestro servicio/producto aún mejor."
+                placeholder="Nos encantaría escuchar tus ideas para hacer nuestro servicio/producto aún mejor."
                 maxlength="500" rows="6" cols="60"></textarea>
             <br />
         </fieldset>
@@ -94,7 +95,7 @@
 
             <p>
                 Tu Edad:<br />
-                <input type="number" name="edad" />
+                <input type="number" name="edad" min="18" max="99" step="1" title="La edad debe ser entre 18 y 99 años" />
             </p>
 
             <p>

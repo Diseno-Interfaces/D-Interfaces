@@ -25,14 +25,14 @@
 
 <body class="body">
     <h1>Formulario de Solicitud de Producto/Servicio</h1>
-    <form name="formulario" method="post" action="#">
+    <form name="formulario" method="post" action="#" enctype="multipart/form-data">
         <fieldset class="anchofield">
             <legend>Tipo de Solicitud</legend>
             <p>
                 Selecciona el tipo de solicitud:
                 <br />
-                <select name="sistema">
-                    <option value="Seleccion" label="-- Por favor, elige --"></option>
+                <select name="sistema" required>
+                    <option value="" disabled selected>-- Por favor, elige --</option>
                     <optgroup label="Producto">
                         <option value="A" label="Producto A"></option>
                         <option value="B" label="Producto B"></option>
@@ -41,13 +41,13 @@
                     <optgroup label="Servicios">
                         <option value="consultoria" label="Servicio de Consultoría"></option>
                         <option value="mantenimiento" label="Servicio de Mantenimiento"></option>
-                        <option value="intalacion" label="Servicio de Instalación"></option>
+                        <option value="instalacion" label="Servicio de Instalación"></option>
                     </optgroup>
                 </select>
             </p>
             <p>
                 Cantidad(para productos):<br />
-                <input type="number" name="numero" value="1" min="1" max="1000" step="1" />
+                <input type="number" name="numero" value="1" min="1" max="100" step="1" />
             </p>
             <p>
                 Prioridad de la Solicitud:<br />
@@ -73,7 +73,7 @@
             <p>
                 Fecha Deseada de Entrega/Inicio:
                 <br />
-                <input type="date" name="Fecha" autocomplete="on" />
+                <input type="date" name="Fecha" min="2025-09-28" required/>
             </p>
 
             <p>
@@ -86,24 +86,24 @@
             <p>
                 Adjuntar documento (opcional):
                 <br />
-                <input type="file" name="Archivos" />
+                <input type="file" name="Archivos" accept=".pdf,.doc,.docx" multiple/>
             </p>
         </fieldset>
 
         <fieldset class="anchofield">
             <legend>Información de Contacto</legend>
             <p>
-                Tu Nombre:<br />
-                <input type="text" name="nombre" autocomplete="on" />
+                Nombre:<br />
+                <input type="text" name="nombre" autocomplete="on" maxlength="20" title="Máximo 20 caracteres" required />
             </p>
             <p>
                 Tu Email:<br />
-                <input type="email" name="email" autocomplete="on" />
+                <input type="email" name="email" autocomplete="on" required/>
             </p>
             <p>
                 Tu Teléfono (opcional):
-                <br />
-                <input type="tel" name="telefono" autocomplete="on" />
+                <br>
+                <input type="tel" name="telefono" pattern="^\d{9}$" title="El teléfono debe ser de 9 números, sin prefijos, ni espacios.">
             </p>
         </fieldset>
         <input type="submit" value="Enviar Solicitud" />

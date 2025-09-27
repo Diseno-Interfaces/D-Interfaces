@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4</title>
 </head>
+
 <style>
     .anchofield {
         width: 50%;
@@ -29,24 +30,20 @@
         <fieldset class="anchofield">
             <legend>Detalles de Contenido y Cuenta</legend>
             <p>
-                SKU del Proyecto (Ej: AB-12345):<br />
-                <input type="text" name="nombre" autocomplete="on" placeholder="" />
+                SKU del Proyecto (Ej: AB-12345):<br/>
+                <input type="text" name="sku" pattern="^[A-Z]{2}-\d{5}$" required/>
             </p>
             <p>
-                Nueva Contraseña (min. 8 caracteres, con mayúscula, minúscula y número):<br />
-                <input type="text" name="apellidos" autocomplete="on" />
-            </p>
-            <p>
-                color Principal del Branding (Hexadecimal, ej: #FF5733):<br />
-                <input type="date" name="Fecha" autocomplete="on" />
+                Color Principal del Branding (Hexadecimal, ej: #FF5733):<br />
+                <input type="text" name="color" pattern="^#(?:[0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$" required/>
             </p>
             <p>
                 ID del Video Relacionado (11 caracteres):<br />
-                <input type="text" name="apellidos" autocomplete="on" />
+                <input type="text" name="video" minlength="11" maxlength="11" required/>
             </p>
             <p>
                 Matricula del Vehículo del Producción (Ej: 1234 BCD):<br />
-                <input type="text" name="apellidos" autocomplete="on" />
+                <input type="text" name="matricula" pattern="^\d{4}\s?[A-Z]{3}$" required/>
             </p>
         </fieldset>
 
