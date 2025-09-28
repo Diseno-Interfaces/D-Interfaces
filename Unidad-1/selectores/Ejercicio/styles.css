@@ -10,6 +10,11 @@
     font-weight: bold;
 }
 
+.resaltado {
+    color: red;
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -143,9 +148,4 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.resaltado {
-    color: red;
-    font-weight: bold;
 }
