@@ -1,4 +1,3 @@
-
 # Respuestas Display
 
 ## 1. Display: block
@@ -13,3 +12,7 @@
 ## 3. Display: inline-block
 
 - Van en la misma línea, pero sí respetan ancho y alto.
+
+## 4. Nesting
+
+- He ido probando con nesting a ver como funcionaba, cogiendo la tarjeta de referencia, aún no entiendo del todo como usar el & delante o detrás, detrás he visto que coge los estilos de la tarjeta.
