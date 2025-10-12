@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Creepster", system-ui;
+    background: #171a24;
+    color: #f4f6ff;
+    margin: 0;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #ff5a57;
+}
+
+h1 {
+    margin: 16px 0 8px;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.galeria {
+    text-align: center;
+    padding: 20px;
+    background: #262a3a;
+    border: 3px dashed #ffcc47;
+    border-radius: 10px;
+    min-height: 140px;
+
+    .tarjeta {
+        background: #3a3e57;
+        border: 2px solid #ff5a57;
+        border-radius: 8px;
+        width: 185px;
+        height: 120px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 22px;
+        text-align: center;
+        box-shadow: 4px 6px 10px 4px #080808aa;
+        transition: transform 0.3s ease;
+
+        .galeria.block & {
+            display: block;
+        }
+
+        .galeria.inline & {
+            display: inline;
+        }
+
+        .galeria.inline-block & {
+            display: inline-block;
+        }
+
+        &:hover {
+            background: #171a24;
+            transform: scale(1.06);
+            border: 2px dashed #ffcc47;
+            color: #ff5a57;
+        }
+    }
+}
