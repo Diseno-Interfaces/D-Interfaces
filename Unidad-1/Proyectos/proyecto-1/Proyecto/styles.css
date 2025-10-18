@@ -154,7 +154,7 @@ button:hover {
 }
 
 .segundoArt > p:first-of-type + ul {
-    border-top: 1px dotted #cfcfcf;
+    border-top: 2px dotted #cfcfcf;
     padding-top: 10px;
 }
 
