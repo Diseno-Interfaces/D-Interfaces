@@ -1,0 +1,82 @@
+body {
+    background-color: #1a1a1a;
+    font-family: 'Roboto Mono', monospace;
+    color: #fff;
+}
+
+.grid-container {
+    height: 95vh;
+    /* 1. Altura menor a 100vh para ver align-content */
+    width: 95vw;
+    /* 2. Ancho menor a 100vw para ver justify-content */
+    margin: 2.5vh auto;
+    /* Centra el contenedor en la página */
+    border: 2px dashed #444;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Definimos 6 columnas, pero ninguna fila explícita */
+    grid-auto-rows: 150px;
+    /* 3. Todas las filas creadas automáticamente tendrán 150px de altura */
+    grid-auto-flow: dense;
+    /* 4. El algoritmo "denso" intentará rellenar los huecos */
+    gap: 15px;
+    justify-content: center;
+    /* 5. Alinea TODA la cuadrícula en el centro horizontalmente */
+    align-content: center;
+    /* 6. Alinea TODA la cuadrícula en el centro verticalmente */
+    align-items: center;
+    /* 7. Alinea los ÍTEMS al centro de su celda verticalmente */
+
+
+    .item {
+        background-color: #333;
+        border: 1px solid #555;
+        border-radius: 8px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        /* Centra el texto del número horizontalmente */
+        align-items: center;
+        /* Centra el texto del número verticalmente */
+        font-size: 1.5rem;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: #0077b6;
+        }
+
+        &.item-wide {
+            grid-column: span 2;
+            /* Ítems que ocupan 2 columnas */
+        }
+
+        &.item-tall {
+            grid-row: span 2;
+            /* Ítems que ocupan 2 filas */
+        }
+
+        /* Estilos de color para hacerlo más vistoso */
+        &.item-2 {
+            background-color: #003f5c;
+        }
+
+        &.item-4 {
+            background-color: #58508d;
+        }
+
+        &.item-8 {
+            background-color: #bc5090;
+        }
+
+        &.item-9 {
+            background-color: #ff6361;
+        }
+
+        &.item-11 {
+            background-color: #ffa600;
+        }
+    }
+}

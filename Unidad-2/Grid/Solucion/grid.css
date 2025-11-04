@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f4f7f6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+        color: #333;
+        font-size: 2.5rem;
+    }
+}
+
+
+.grid-container {
+    display: grid;
+    /* 1. Activamos Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* 2. Jugamos con el auto-fit */
+    gap: 30px;
+    /* 3. Espacio entre las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centra el contenedor en la página */
+
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        /* Asegura que la imagen no se salga de las esquinas redondeadas */
+        display: flex;
+        flex-direction: column;
+        /* Organiza el contenido de la tarjeta en columna */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            /* Eleva la tarjeta ligeramente */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            /* Sombra más pronunciada */
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /* La imagen cubre el espacio sin deformarse */
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            /* Permite que el contenido ocupe el espacio restante */
+            h3 {
+                margin-top: 0;
+                margin-bottom: 10px;
+                color: #333;
+                font-weight: 600;
+            }
+
+            p {
+                flex-grow: 1; /* Empuja el botón hacia abajo */                
+                margin-bottom: 20px;
+                color: #666;
+                line-height: 1.6;
+            }
+        }
+
+        .card-footer {   
+            display: flex;
+            flex-grow: 1;
+            gap: 10px;
+            justify-content: center;
+
+            .btn {
+                min-width: 70px;
+                background-color: #0077b6;
+                color: #fff;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 8px;
+                text-align: center;
+                font-weight: 600;
+                align-self: flex-start; /* Alinea el botón al inicio */                
+                transition: background-color 0.2s ease;
+                &:hover {
+                    background-color: #023e8a;
+                }                
+            }
+            small{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                align-self: center;
+            }
+        }
+    }
+}
