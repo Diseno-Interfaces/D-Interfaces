@@ -84,6 +84,7 @@ main {
         padding: 20px;
 
         & > .destinations-grid {
+            flex-wrap: wrap;
             display: flex;
             height: auto;
             width: 100%;
@@ -91,6 +92,7 @@ main {
             padding: 15px;
 
             & > .card-content {
+                max-width: 350px;
                 display: flex;
                 flex-direction: column;
                 background-color: white;
