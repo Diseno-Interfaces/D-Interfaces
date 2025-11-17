@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #212529;
+    --font-family: 'Arial', sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.card-container {
+    display: grid;
+    gap: 20px;
+
+    .card {
+        background-color: var(--card-background);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        overflow: hidden;
+        transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* :has() - Si una tarjeta contiene una imagen, aplica un estilo al contenido */
+        &:has(img) .card-content {
+            border-top: 1px solid #eee;
+        }
+
+        /* :not() - Aplica un borde a todas las tarjetas que no sean "featured" */
+        &:not(.featured) {
+            border: 1px solid #ddd;
+        }
+    }
+
+    .card-content {
+        padding: 20px;
+
+        .button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color var(--transition-speed);
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+
+    /* 3. Media Queries para Diseño Adaptable */
+    @media (min-width: 600px) {
+        & {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 900px) {
+        & {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+
+
+
+/* 4. Preferencias de Usuario */
+
+/* Tema Oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #00aaff;
+        --background-color: #121212;
+        --card-background: #1e1e1e;
+        --text-color: #e0e0e0;
+    }
+}
+
+
+/* Transparencia Reducida */
+@media (prefers-reduced-transparency: reduce) {
+    .card {
+        --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        /* Sombra más sólida */
+    }
+}
+
+/* Contraste Aumentado */
+@media (prefers-contrast: more) {
+    .button {
+        border: 2px solid var(--text-color);
+    }
+
+    .card {
+        border: 2px solid var(--secondary-color);
+    }
+}
+
+
+/* :is() y :where() - Aplica estilos a h1 y h2 */
+:is(h1, h2) {
+    color: var(--primary-color);
+}
+
+/* :where */
+:where(header, main) {
+    padding: 0 10px;
+}

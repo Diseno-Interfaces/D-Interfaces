@@ -1,0 +1,24 @@
+@import url('css/menu-desktop.css') screen and (width > 502px);
+@import url('css/menu-mobile.css') screen and (width <= 502px);
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  a{
+    font-size: 1.7rem;
+    img{
+      margin: 0 .2rem;
+      width: 20px;
+    }
+  }
+}

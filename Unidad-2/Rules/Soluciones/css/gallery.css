@@ -1,0 +1,91 @@
+@property --is-featured {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: true;
+}
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: dense;
+  
+  gap: 1rem;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+
+.item-wide {
+  grid-column: span 2;
+}
+
+.item-tall {
+  grid-row: span 2;
+}
+
+.gallery-item {
+  overflow: hidden; 
+  border-radius: 8px;
+  background-color: #ddd;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+  transition: transform 0.4s ease, border 0.3s ease;
+}
+
+.item-featured img {
+  border: 4px solid #FFD700;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+}
+
+
+@supports(color: if(style(--textColor: white): black; else: pink)){
+  footer::after{
+    content: "Este navegador soporta el if de CSS";
+    color: white;
+  }
+    
+  /* 1. Reseteamos el fallback si el navegador es compatible */
+  .item-featured img {
+    border: none;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .gallery-item {
+    --is-featured: 0; /* Valor por defecto */
+  }
+  .item-featured {
+    --is-featured: 1; /* Valor para items destacados */
+  }
+  
+  .gallery-item img {
+     border: if(style(--is-featured: 1): 4px solid #FFD700; else: 4px solid transparent);
+     transform: if(style(--is-featured: 1): scale(1.03); else: scale(1));
+  }
+  
+   .gallery-item:hover img {
+     transform: if(style(--is-featured: 1): scale(2); else: scale(1.05));
+     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+   }
+}
+
+
+@media (max-width: 400px) {
+  .gallery-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;    
+  }
+
+  .item-tall {
+    aspect-ratio: 16 / 10;
+  }
+}

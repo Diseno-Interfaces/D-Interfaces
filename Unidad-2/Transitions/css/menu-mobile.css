@@ -1,0 +1,26 @@
+nav{
+    flex-grow: 1;
+    text-align: right;
+    height: 40px;
+    max-width: 300px;
+
+    .icon-menu::before{    
+        content: url('./menu.png');
+        padding-right: 0.5rem;
+    }
+    ul{
+        overflow: hidden;
+        transform: translateX(300px);
+        transition: transform 0.3s ease-in-out;
+        height: calc(100vh - 40px);
+        list-style-type: none;
+        background-color: black;
+        color: orange; 
+    }
+    &:has(i:hover, ul:hover){
+        cursor: pointer;
+        ul{
+            transform: translateX(0);            
+        }
+    }
+}

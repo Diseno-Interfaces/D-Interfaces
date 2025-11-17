@@ -1,0 +1,23 @@
+/* Código básico*/
+nav{
+    flex-grow: 1;
+    ul{
+        color: red;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        >li{
+            height: 18px;
+            overflow: hidden;
+            &:hover {
+                overflow: visible;
+            }
+            .submenu{
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                background: black;
+            }
+        }
+    }
+}

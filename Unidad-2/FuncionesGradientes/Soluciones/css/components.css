@@ -1,0 +1,62 @@
+.product-card {
+  width: min(90vw, 380px);
+  background-color: lch(20% 0.03 250);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px oklch(0% 0 0 / 0.5);
+  overflow: hidden;
+
+  .card-image-container {
+    background: radial-gradient(ellipse at center,
+        oklch(60% 0.15 150 / 0.3),
+        transparent 70%);
+    overflow: hidden;
+
+    img {
+      transform: scale(1.1) rotate(-3deg);
+      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+  }
+
+  &:hover .card-image-container img {
+    transform: scale(1) rotate(0deg);
+  }
+
+  .card-content {
+    padding: calc(1.5rem + 2px);
+    padding-bottom: 0;
+
+    .card-title {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      color: hwb(180 30% 10%);
+    }
+
+    .card-description {
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      position: relative;
+      left: calc((1.5rem + 2px) * -1);
+      width: calc(100% + (1.5rem + 2px) * 2);
+      text-align: center;
+      background-image: linear-gradient(135deg,
+          oklch(65% 0.25 330),
+          oklch(60% 0.25 290));
+      box-shadow: 0 2px 5px oklch(0% 0 0 / 0.2);
+      transition: filter 0.3s ease, box-shadow 0.3s ease;
+      color: color-mix(in oklab, hwb(180 30% 10%), white 50%);
+      transition: background-position 0.4s ease-out, color 0.3s ease;
+
+      &:hover {
+        filter: brightness(1.2);
+        box-shadow: 0 5px 20px oklch(60% 0.25 290 / 0.5);
+      }
+    }
+  }
+}
