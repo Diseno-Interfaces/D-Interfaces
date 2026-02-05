@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J+Guides:ital@0;1&display=swap');
+@import "tailwindcss";
+@import 'tailwind-animations';
+
+@theme {
+  --text-tiny: 0.625rem; 
+  --color-regal-blue-50: orange;
+  --color-regal-blue: red;
+  --color-regal-blue-200: black;
+  --color-blue-50: purple;
+  --color-mari: red;
+  --font-roboto: "Roboto", sans-serif; 
+  --font-colegio:  "Playwrite GB J Guides", cursive;
+}
+
+.btn-blue {
+  background-color: #3b82f6;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white;
+}
+.color-ansiedad{
+  color: red;
+}
+.ansiedad{
+  @apply flex flex-col md:flex-row items-center p-6 bg-white rounded-xl shadow-md transition transform hover:scale-105;
+}
