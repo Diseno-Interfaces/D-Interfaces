@@ -13,35 +13,19 @@
 </head>
 
 <body class="font-poppins flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 dark:text-white">
+
   <header
-    class="flex justify-between p-6 items-center shadow-lg bg-white text-gray-600 dark:bg-gray-700 dark:text-white z-10">
+    class="relative flex justify-between p-6 items-center shadow-lg bg-white text-gray-600 dark:bg-gray-700 dark:text-white z-10">
+    <div
+      class="peer md:hidden cursor-pointer z-50 font-bold text-4xl hover:text-gray-800 text-black pr-3 dark:text-white dark:hover:text-gray-300">
+      ☰
+    </div>
     <h1 class="text-sky-500 font-bold text-2xl">Horizonte Lejano ✈️</h1>
-    <nav>
-      <ul class="flex gap-6 font-bold">
+    <nav
+      class="hidden peer-hover:flex hover:flex flex-col absolute top-full left-0 w-auto bg-white dark:bg-gray-700 shadow-lg -mt-6">
+      <ul class="md:flex gap-6 font-bold">
         <li>
           <a class="p-2 hover:text-sky-600 transition-colors duration-300" href="#">Inicio</a>
-        </li>
-        <li class="group relative">
-          <a class="p-2 hover:text-sky-600 transition-colors duration-300" href="#">Destinos</a>
-          <ul
-            class="opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto flex flex-col absolute top-8 left-0 z-10 bg-white dark:bg-gray-700 shadow-lg rounded-md w-32 text-center divide-y divide-gray-300 transition-opacity duration-300">
-            <li>
-              <a class="inline-block w-full p-2 hover:text-sky-600 hover:bg-sky-50 transition-colors duration-300"
-                href="#">Europa</a>
-            </li>
-            <li>
-              <a class="inline-block w-full p-2 hover:text-sky-600 hover:bg-sky-50 transition-colors duration-300"
-                href="#">América</a>
-            </li>
-            <li>
-              <a class="inline-block w-full p-2 hover:text-sky-600 hover:bg-sky-50 transition-colors duration-300"
-                href="#">Asia</a>
-            </li>
-            <li>
-              <a class="inline-block w-full p-2 hover:text-sky-600 hover:bg-sky-50 transition-colors duration-300"
-                href="#">África</a>
-            </li>
-          </ul>
         </li>
         <li>
           <a class="p-2 hover:text-sky-600 transition-colors duration-300" href="#">Ofertas</a>
